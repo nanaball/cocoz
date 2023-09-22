@@ -1,0 +1,96 @@
+<!-- html_tag_form_2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.html" method="GET">
+        <!-- GET방식은 주소에 내가 쓴 입력값이 보임 <form action="index.html" method="GET">
+             POST방식은 주소에 내가 쓴 입력값이 보이지 않음 <form action="index.html" method="POST"> -->
+        <input type="text" name="id" value="id001" required /><br/>
+        <!-- requried 필수값으로 꼭 작성해야함/ 미작성시 제출이 안되서 페이지 이동 불가 
+           
+            disabled 사용불가/ readonly 읽기전용 : 수정 불가 
+            둘의 차이는 겟방식일때 disabled는 전달되는 데이터에서 제외라 보이지 않음
+            readonly는 수정은 불가하지만 입력값이 전달되서 입력값이 보임 -->
+        <input type="text" name="temp1" value="100" disabled /><br/>
+        <input type="text" name="temp2" value="200" readonly/><br/>
+        <br/>
+        <!-- 내부의 입력 요소를 묶어주는 역할 -->
+        <fieldset disabled>
+            <legend>SELECT BOX</legend>
+            <select name="fruits">
+                <option>오렌지</option>
+                <option selected>사과</option>
+                <option>한라봉</option>
+            </select>
+            <select name="hobby" multiple>
+                <optgroup label="GAME">
+                    <option>lol</option>
+                    <option>고급시계</option>
+                    <option>로스트아크</option>
+                </optgroup>
+                <optgroup label="STUDY">
+                    <option>html</option>
+                    <option>java</option>
+                    <option>경제</option>
+                </optgroup>
+
+            </select>
+        </fieldset>
+        <br/>
+        <h3>Data List</h3>
+        <!-- 출력할 목록 지정 -->
+        <input list="deplist" name="dept"/>
+        <datalist id="deplist">
+            <option value="컴퓨터공학과"></option>
+            <option value="영어영문학과"></option>
+            <option value="경영학과"></option>
+            <option value="사회체육과"></option>
+        </datalist>
+        <br/>
+        <hr/>
+        <h3>파일 입력 필드</h3>
+        <input type="file" />
+        <!-- accept 선택할 수 있는 파일을 제한걸어둠
+            *관련된 모든 문서를 의미 
+            multipe을 하면 여러파일 선택 가능 -->
+        <input type="file" accept="image/*" multiple/>
+        <input type="file" accept="text/*" />
+        <input type="file" accept=".pdf/" />
+        <br/>
+        <!-- 여러개를 쓸 수 있게 공간을 넓게 만들어줌 -->
+        <textarea cols="30" rows="5" name="content">aaaa</textarea>
+        <br/>
+        <h3>HTML5 입력태그</h3>
+        <!-- 날짜형식 -->
+        <input type="date" name="date" required/><br/>
+        <!-- 이메일형식 -->
+        <input type="email" name="email" required /><br/>
+        <!-- 숫자 형식 -->
+        <input type="number" name="age"/><br/>
+        <!-- 범위 슬라이드 -->
+        <input type="range" name="score" min="-50" max="100" value="0"/><br/>
+        <!-- text와 동일하나 삭제버튼=엑스버튼 추가 -->
+        <input type="search" /><br/>
+        <!-- 색상 선택 상자 -->
+        <input type="color" name="color"/><br/>
+    
+        <!-- 이미지 제출 버튼 : submit 역할도 함-->
+        <input type="image" src="../img/apple.png" alt="제출용 이미지 입니다. "/><br/>
+        <!-- 사용자에게 출력은 되지 않지만 form tag 제출 값으로 전송 됨 -->
+        <input type="hidden" name="hide" value="숨은값"/>
+
+        <!-- 버튼 타입은 따로 지정하지 않으면 기본값이 submit -->
+        <button type="submit">제출</button>
+        <button type="button">TEST</button>
+
+
+    </form>
+
+
+</body>
+</html>

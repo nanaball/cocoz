@@ -1,0 +1,76 @@
+<!-- 6_action_selector.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color:red;
+        }
+
+        /* 해당 태그 요소에 마우스 pointer가 올라간 상태 */
+        h1:hover{
+            color: blue;
+            cursor: pointer;
+
+        }
+
+        /* 사용자가 선택하여 활성화된 상태 mouse click */
+        h1:active{
+            color:orange
+        }
+
+        /* 활성화 상태 */
+        input:enabled{
+            background-color: red;
+            color: white;
+        }
+
+        /* 읽기전용 상태 */
+        input:read-only{
+            background-color: pink;
+            color: skyblue;
+        }
+         
+        /* 비활성화 상태 / readonly랑 같이 쓰면 readonly를 따라가서 비활성화 상태도 바꾸고 싶으면 readonly 아래에 써야함*/
+        input:disabled{
+            background-color: grey;
+            color: white;
+
+        }
+
+        /* 사용자와 상호작용할 준비가 완료된 상태 */
+        input:focus{
+            background-color: white;
+            color: black;
+        }
+        
+        /* 입력태그의 상태가 checked 상태일 경우 */
+        input:checked{
+            /* 너비 */
+            width: 100px;
+            /* 높이 */
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>반응-상태 선택자</h1>
+    <h3>사용가능</h3>
+    <input type="text" placeholder="아이디 작성공간" />
+    <h3>사용하지 않음</h3>
+    <input type="text" value="aaa" disabled /><br/>
+    <h3>읽기 전용 상태</h3>
+    <input type="text" value="bbb" readonly /><br/>
+    <hr>
+    <label>
+        <input type="checkbox" /> 동의하시겠습니까?
+    </label>
+    <br/>
+    <input type="checkbox" id="accept" />
+    <label for="accept">동의하시겠습니까?</label>
+
+</body>
+</html>

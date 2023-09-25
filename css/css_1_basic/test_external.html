@@ -1,0 +1,31 @@
+<!-- 
+    외부 스타일 시트
+    test_external.html
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>외부스타일시트</title>
+    <!-- 외부스타일 시트 : 여러 페이지에서 공통적으로 쓰는걸 미리 빼놓고 적용 
+         내부스타일 시트 : 현재 페이지에서만 쓰는거 적용-->
+    <style>
+        h1{
+            color: white;
+        }
+        h2{
+            color: blue;
+        }
+    </style>
+    <link rel="stylesheet" href="test.css"/>
+        <!-- 글쓰는 순서에 따라 적용 순서가 달라짐 위->아래 -->
+
+ </head>
+ <body>
+    <h1 style="color: black;">외부 스타일 시트</h1>
+    <h1>외부 스타일 시트</h1>
+    <h2>외부 스타일 시트 2</h2>
+    <h2>외부 스타일 시트 2</h2>
+ </body>
+ </html>

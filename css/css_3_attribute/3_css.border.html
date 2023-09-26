@@ -1,0 +1,54 @@
+<!-- 3_css.border.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>외곽선</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border:1px solid black;
+            background-color: bisque;
+            /* 
+                keyword
+                width : 두께 
+                thick : 굵게
+                medium :중간
+                thin : 얇게
+
+                style- 선모양
+                solid : 실선
+                dotted : 점선
+                dashed : 약간 긴 점선
+                double : 이중 실선
+            */
+
+            /* border-top or right or bottom or left-속성 */
+            border-right-color: aqua;
+            border-right-style: double;
+            border-right-width: thick;
+
+        }
+
+        .inner_box{
+            border:1px dotted black;
+            width: 70px;
+            height: 70px;
+            border-radius: 35px;
+            /* radius 반지름
+                      사각형 모서리에서 npx 만큼 들어가서 거기서 원을 그려 모서리가 둥그러짐  */
+            background-color: yellow;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 15px
+        }
+    </style>
+</head>
+<body>
+    <!-- div.box>div.inner_box{content} -->
+    <div class="box">
+        <div class="inner_box">content</div>
+    </div>
+</body>
+</html>

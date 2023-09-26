@@ -1,0 +1,105 @@
+<!-- 5_css_font.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&family=Moirai+One&family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@200;300;400;500&family=Noto+Serif+KR:wght@200;300&display=swap" rel="stylesheet">
+    <style>
+        .font{
+            font-size:40px;
+            font-weight:bold;
+            font-weight:normal;
+            /* 
+                lighter     nomrmal    bold     bolder 
+                100,200,300,400,500,600,700,800,900
+            */
+
+            font-family: arial, times, sans-serif;
+        }
+
+        .child{
+            font-weight:bolder;
+        }
+
+        .third{
+            font-weight: lighter;
+
+        }
+
+        .inner_span{
+            font-family: 'Dokdo', cursive;
+        }
+
+        span{
+            /* default text size in browser is 16px */
+            /*
+                web
+                -> 72dpi(dot per inch) == 1inch당 pixel 72개 
+                1inch == 2.54cm
+
+                windows
+                -> 96dpi
+
+                기본 폰트 사이즈 == 16pt == 4.24mm
+             */
+            font-size:16px;
+            font-size:12pt;
+            font-size:1em;
+        }
+
+        .inner_span{
+            font-size:2em;
+        }
+
+        /* 물려받은 '글자' 사이즈 2em의 2배임 */
+        .third_span{
+            font-size:2em;
+            font-size:200%
+        }
+
+        .box{
+            width:300px;
+            height:300px;
+            border:1px solid black;
+            /* text-align : 내부 컨텐츠 수평 정렬 */
+            /* left right center */
+            text-align:right;
+            text-align:center;
+            /* line-height : 줄간격 
+                한개의 라인 컨텐츠만 존재할때, 부모의 높이와 줄간격 높이가 일치하면 수직 정렬이 center로 이루어짐 */
+            line-height: 150px;
+        }
+
+        .content{
+            font-family: 'Dokdo', cursive;
+            /* 글자간격 */
+            letter-spacing:10px;
+            /* 단어간격 */
+            word-spacing: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="font">
+        HELLO HTML
+        <div class="child">
+            hello html
+            <div class="third">
+                hello html
+            </div>
+        </div>
+    </div>
+    <span>폰트<span class="inner_span">글자 <span class="third_span">폰트</span> 확인</span>
+    <br/>
+    <hr/>
+    <div class="box">
+        <span class="content">Content Space</span><br/>
+        <span class="content">Content Space</span>
+    </div>
+</body>
+</html>

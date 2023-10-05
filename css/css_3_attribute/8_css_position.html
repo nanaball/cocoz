@@ -1,0 +1,66 @@
+<!-- 8_css_position.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_position</title>
+    <style>
+        .box1{
+            position:static;
+            width:500px;
+            height: 500px;
+            background-color: gray;
+            margin-bottom: 50px;
+        }
+
+        .absolute_parent{
+            /* 2차원내에서 인접해있는 위아래 박스요소에서의 여백은 큰쪽에서 작은쪽으로 병합된다. 
+            작은쪽의 여백을 늘리고 싶어서 아무리 늘려도 큰쪽에 잡아 먹혀서 변하지 않음 */
+            position:static;
+            /* 차원이 달라서 마진이 병합되지 않는다. */
+            position:absolute;
+            /* 2차, 3차 속성 둘다 가지고 있음. */
+            position:relative;
+            position: static;
+
+            margin-top: 100px;
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+            /* 절대 좌표로 위치 지정 
+                top bottom,
+                left right */
+            top:50px;
+            left:30px;
+        }
+
+        .absolute_child{
+            position:absolute;
+            top:100px;
+            left:100px;
+            width:100px;
+            height: 100px;
+            background-color: yellow;
+
+        }
+
+        .fixed{
+            position:fixed;
+            top:50px;
+            right:50px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="absolute_parent">
+        <div class="absolute_child"></div>
+    </div>
+    <div class="fixed"></div>
+</body>
+</html>

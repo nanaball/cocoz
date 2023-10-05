@@ -16,6 +16,10 @@
             /* s - seconds, ms millis seconds (1/1000) */
             /* 1s == 1000ms */
             transition-duration: 3s;
+            /* 0.5s == 500ms */
+            transition-delay: 500ms;
+            /* 지정한 시간에 따라 변경 */
+            transition-timing-function: linear;
         }
 
         .trans:hover{
@@ -31,6 +35,26 @@
     <div class="trans"></div>
     <br/>
     <hr/>
+    <input type="checkbox" />체크!
+    <!-- (p+div.stick.stick$)*9 -->
+    <p>ease</p>
+    <div class="stick stick1"></div>
+    <p>linear</p>
+    <div class="stick stick2"></div>
+    <p>ease-in</p>
+    <div class="stick stick3"></div>
+    <p>ease-out</p>
+    <div class="stick stick4"></div>
+    <p>ease-in-out</p>
+    <div class="stick stick5"></div>
+    <p>step-start</p>
+    <div class="stick stick6"></div>
+    <p>step-end</p>
+    <div class="stick stick7"></div>
+    <p>steps(3,start)</p>
+    <div class="stick stick8"></div>
+    <p>steps(3,end)</p>
+    <div class="stick stick9"></div>
 
 </body>
 </html>

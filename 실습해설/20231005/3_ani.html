@@ -1,0 +1,64 @@
+<!-- 3 턴 워드 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>turn word/animation</title>
+    <style>
+        .wrap{
+            border:1px solid black;
+            width :980px;
+            height:300px;
+            margin: 0 auto;
+            position:relative;
+            
+            display:flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .word{
+            border: 1px solid black;
+            width:80px;
+            height:20px;
+            text-align: center;
+            /* 
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-left:-40px;
+            margin-top:-10px;  
+            */
+            animation:rotate 2s linear infinite alternate;
+        }
+
+        @keyframes rotate{
+            /* 각도를 표현 
+                deg(degree) */
+
+            0%{
+                transform: rotateY(0deg);
+            }
+
+            50%{
+                /* transform: rotateY(180deg); */
+                transform:rotateY(3.14rad)
+            }
+
+         
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="word">부산 IT</div>
+    </div>
+
+    
+</body>
+</html>

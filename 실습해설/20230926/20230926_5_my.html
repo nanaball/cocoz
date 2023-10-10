@@ -1,0 +1,96 @@
+<!-- 20230926_5.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid red;
+            width:100%;
+            height:500px;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 150px 150px 150px 150px;
+            grid-gap: 5px;
+
+        }
+
+
+        .box div{
+            background-color: white;
+            border:1px solid black;
+        }
+
+        .box1{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            border-color:0px;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        .box2{
+            background: url(../교육생실습/20230926_html_css_실습/실습자료/img/dish1.jpg) no-repeat center;
+            background-size: auto;
+            width:auto;
+            height:auto;
+        }
+
+        .box3{
+            background-image: url(../교육생실습/20230926_html_css_실습/실습자료/img/dish2.jpg);
+            background-size: auto;
+            width:auto;
+            height:auto;
+        }
+
+        .box4{
+            background-image: url(../교육생실습/20230926_html_css_실습/실습자료/img/dish3.jpg);
+            background-size: auto;
+            width:auto;
+            height:auto;
+        }
+
+        .box5{
+            background-image: url(../교육생실습/20230926_html_css_실습/실습자료/img/dish4.jpg);
+            background-size: auto;
+            width:auto;
+            height:auto;
+        }
+
+        .box6{
+            background-image: url(../교육생실습/20230926_html_css_실습/실습자료/img/dish5.jpg);
+            background-size: auto;
+            width:auto;
+            height:auto;
+            grid-column-start: 4;
+            grid-column-end: 2;
+        }
+
+        .box7{
+            background-color: black;
+            color:white;
+            grid-column-start: 4;
+            grid-column-end: 1;
+        }
+
+    
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="box1">솔로의 식탁</div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7">솔로의 식탁</div>
+    </div>
+    
+</body>
+</html>

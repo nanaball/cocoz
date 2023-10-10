@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>positioning</title>
+  <style>
+     * {
+      margin: 10px;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .wrap {
+      border:1px solid white;
+      width: 98%;
+      margin: 0 auto;
+      box-shadow: 10px 25px 25px 10px rgba(128,128,128, 0.7);
+    }  
+
+    .items {
+      display: grid;
+      gap: 30px 15px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .item {
+      border: 1px solid lightgray;
+      padding: 10px 0 10px 10px;
+    }
+
+    .i1{
+        width:300px;
+        height: 400px;;
+        margin:20px 0 20px 20px;
+    }
+
+    .i2{
+        color:lightgray;
+    }
+
+    li.i3{
+        font-size:20px;
+        font-weight:bold ;  
+        padding-bottom: 15px; 
+        border-bottom: 1px solid black;
+        
+    }    
+
+    .s1{
+        color:lightgray;
+        margin:-10px;
+        
+    }
+
+    .s2{
+        text-align:right;
+        margin:0 0 20px 300px;
+    }
+
+
+    @media screen and (max-width:1024px) and (orientation:landscape) {
+      .items {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media screen and (max-width:769px) and (orientation:landscape) {
+      .items {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* 
+      mobile 은 ~ 769px     1개의 아이템
+      tablet 은 ~ 1024px    2개의 아이템
+      pc 는       1024px ~  3개의 아이템 
+    */
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h2>수제 초콜릿 전문점</h2>
+    <div class="items">
+      <div class="item">
+        <ul>
+          <li class="i1">
+            <img src="img/choco1.jpg" />
+        
+          </li>
+          <li class="i2">초콜릿 스타일링</li>
+          <li class="i3">간식용 수제 초콜릿</li>
+          <li class="i4">
+            <div>
+              <span class="s1">2023.03.10</span>
+              <span class="s2">좋아요 3 · 추천 5</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="item">
+        <ul>
+          <li class="i1">
+            <img src="img/choco2.jpg" />
+          </li>
+          <li class="i2">초콜릿 스타일링</li>
+          <li class="i3">간식용 수제 초콜릿</li>
+          <li class="i4">
+            <div>
+              <span class="s1">2023.03.10</span>
+              <span class="s2">좋아요 3 · 추천 5</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="item">
+        <ul>
+          <li class="i1">
+            <img src="img/choco3.jpg" />
+          </li>
+          <li class="i2">초콜릿 스타일링</li>
+          <li class="i3">간식용 수제 초콜릿</li>
+          <li class="i4">
+            <div>
+              <span class="s1">2023.03.10</span>
+              <span class="s2">좋아요 3 · 추천 5</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="item">
+        <ul>
+          <li class="i1">
+            <img src="img/choco4.jpg" />
+          </li>
+          <li class="i2">초콜릿 스타일링</li>
+          <li class="i3">간식용 수제 초콜릿</li>
+          <li class="i4">
+            <div>
+              <span class="s1">2023.03.10</span>
+              <span class="s2">좋아요 3 · 추천 5</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="item">
+        <ul>
+          <li class="i1">
+            <img src="img/choco5.jpg" />
+          </li>
+          <li class="i2">초콜릿 스타일링</li>
+          <li class="i3">간식용 수제 초콜릿</li>
+          <li class="i4">
+            <div>
+              <span class="s1">2023.03.10</span>
+              <span class="s2">좋아요 3 · 추천 15</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="item">
+        <ul>
+          <li class="i1">
+            <img src="img/choco6.jpg" />
+          </li>
+          <li class="i2">초콜릿 스타일링</li>
+          <li class="i3">간식용 수제 초콜릿</li>
+          <li class="i4">
+            <div>
+              <span class="s1">2023.03.10</span>
+              <span class="s2">좋아요 3 · 추천 5</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

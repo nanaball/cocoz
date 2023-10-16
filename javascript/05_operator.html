@@ -40,6 +40,7 @@
     number3 = number2 = number1 = number;
     console.log(`${number3} : ${number2} : ${number2} : ${number}`);
         
+    // 사칙연산은 좌->우 / 대입연산은 우->좌 순 
         let x = 3;
         let y = 6;
 
@@ -71,12 +72,12 @@
         let count = 0;
         count = count + 1;
         count += 1;
-        count++; // 피연산자의 기존 값에 1을 더한 값을 대입
+        count++; // 피연산자의 기존 값에 1을 더한 값을 대입(증가)
         console.log(count);
 
         count = count - 1;
         count -= 1;
-        count--;
+        count--; //(감소)
         console.log(count);
         count--;
         console.log(count);
@@ -84,14 +85,18 @@
         result = 0;
         // 후위 연산
         // 증감식이 연산되기 전에 변수의 값을 좌항에 대입
+        // result = 0, count = -1
         result = count++;
         console.log("result : "+result);
         console.log("count : "+count);
         // 전위 연산
         // 증감식이 연산되고 나서 값을 대입
+        // result = -1, count = 0
+
         result = ++count;
         console.log("result : "+result);
         console.log("count : "+count);
+        // result = 1, count = 1
 
         console.log(++count >= 2);
 

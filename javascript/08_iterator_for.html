@@ -1,0 +1,156 @@
+<!-- 08_iterator_for.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>for</title>
+    <script>
+        /* 범위 주석
+
+           반복문 : 프로그램 내에서 연속된 동일한 명령을 일정 횟수만큼 반복하여 수행하도록 제어하는 명령문
+            
+           종류 : for (반복 횟수가 정해져 있는 경우), 
+                  while do while (반복 횟수가 정해져 있지 않은 경우)
+
+                //    범 (범위지정하고 ctrl+/ 하면 한줄 주석으로 주석 처리 됨)
+                //    위
+                //    주
+                //    석
+        */
+
+       // 한줄 주석 (ctrl + /)
+       // 반복문 - for 문
+
+       /*
+            for 문 표현 식
+            for (1->초기화식; 2->5->8조건식; 4->7증감식){
+                3->6반복수행되는 작업(수행문)
+            }
+
+            1. 초기화식 ex) let i = 0; 최초에 한번만 수행
+            2. 조건식을 비교, 조건식의 결과가 참이면 블럭 안의 수행문 실행.
+                ex) i < 10;
+            3. 증감식 수행 ex); i++
+            4. 2~3 반복 수행
+            5. 조건식을 비교, 조건식의 결과가 거짓이면 반복문(for)을 종료.
+        */
+
+        document.write("카운트 : ");
+        // for(var i = 1; i < 10; i++){
+        // for(var i = 1; i < 10; i = i + 1){
+        var i;
+        for(var i = 1; i < 10; i = i + 1){
+
+
+            document.write(i + " ");
+        }
+        document.write("<br/>");
+        document.write(`출력 완료 - i : ${i} <br/>`);
+
+        for(let j = 1; j <= 6; j++){
+            document.write("<h"+j+">"); // <hj>
+            document.write(j);
+            document.write("</h"+j+">");// </hj> 
+        }
+
+        // {} 내부에 선언된 변수는 {}이 종료되면 사라짐
+        // {} 내부에서만 사용이 가능하다. 
+        // document.write(` j : ${j} <br/>`);
+
+
+
+
+        /*
+            quiz 1- 1에서부터 100까지의 정수의 총합을 구해보시오.
+        */
+
+        //총합을 저장할 변수 선언
+        let total;
+        // total = 1+2+3+4+...;
+        total = 0; 
+        total = total + 1;  // 1
+        total = total + 2;  // 1+2
+        total = total + 3;  // 1+2+3
+        total = total + 4;  // 1+2+3+4
+        // ...
+        total = total + 100; // 1+2+3+...+100;
+
+        // 1~10까지의 총합
+        total = 1+2+3+4+5+6+7+8+9+10;
+
+        total = 0;
+        // for(let j=1; j<=10; j++)
+            // 1에서부터 101보다 작을 때까지 1씩 증가
+        for(let j=1; j<101; j++){
+            console.log(j);
+            total = total + j;
+            document.write(`j: ${j}, total : ${total} <br/>`);
+
+        }
+
+        document.write("total : " + total);
+        document.write("<br/>");
+        
+
+    
+
+
+        /*
+            quiz 2- 사용자에게 정수 2개를 입력 받아 
+                    value1 ~ value2 까지의 총합을 구하시오.
+        */
+
+        let value1 = window.prompt("첫번째 정수를 입력하시오.");
+        let value2 = window.prompt("두번째 정수를 입력하시오.");
+
+        let sum = 0;    // 총합을 저장할 변수 선언 및 초기화
+        // 입력양식에서 사용자가 입력한 데이터는 모두  string type
+        // 수치연산을 위해서는 number type으로 변환
+        // parseInt('수치형값') : '수치형값'을 number type으로 변환
+        value1 = parseInt(value1);
+        value2 = parseInt(value2);
+        for(let j = value1; j <= value2; j++){
+            sum = sum +j;
+        }
+        document.write(`sum : ${sum} <br/>`);
+        document.write("sum : " + sum + "<br/>");
+
+        /*
+            2. 1에서부터 100까지의 총합을 구하는 방법
+
+        */
+
+        total = 0;
+        for(let j = 100; j > 0; j--){
+            // total = total+j;
+            total +=j;
+        }
+
+        /*
+            quiz. 1 ~100까지의 정수 중 3의 배수의 총합을 구하시오.
+
+               ex) number % 3 == 0  3으로 나누어 떨어짐.
+        */
+
+        // 3의 배수의 총합을 저장할 total 변수의 값을 0으로 재할당
+        total = 0;
+        for(let n = 1;  0< n< 101; n++){
+            if(n % 3 == 0){
+                console.log();
+                total = total + n;
+            }            
+        }
+
+        document.write(`3의 배수의 총합 : ${total} <br/>`);
+
+
+   
+
+
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html>

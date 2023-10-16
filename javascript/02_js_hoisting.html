@@ -1,0 +1,43 @@
+<!-- 02_js_hoisting.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoisting</title>
+    <script>
+        /*
+            hoisting - 상단으로 끌어 올리다
+
+            var 변수명; 으로 선언된 변수의 선언부는 script의 최상단부로 이동 된다.
+
+            함수(function)의 선언부는 script의 최상단부로 이동되어 script내부에서 어디서나 호출이 가능하다.
+        */
+        // var temp;
+        /*
+        function test(){
+            alert('test alert!');
+        }
+        */
+        test();
+
+        console.log(temp);
+        temp = "천재";
+        console.log(temp);
+        var temp = "최기근";
+        console.log(temp);
+
+        //let 
+        // console.log(temp2); // 오류
+        let temp2 = "최기근"; // hoisting이 일어나지 않음
+
+
+        function test(){
+            alert('test alert!');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

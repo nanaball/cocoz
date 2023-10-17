@@ -1,0 +1,65 @@
+<!-- 4me -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script>
+        total = 0;
+        for(let n = 0; n < 101; n++){
+            total += n;          
+        }
+        document.write(`전체합계 : ${total} <br/>`);
+
+
+        
+        total = 0;
+        for(let n =0; n<101; n++){
+            if(n % 2 == 0){
+                console.log(n);
+                total = total + n;
+            }
+        }
+        document.write(`짝수합계 : ${total} <br/>`);
+
+        total = 0;
+        for(let n =0; n<101; n++){
+            if(n % 2 == 0){
+                
+            }else{
+                console.log(n);
+                total = total + n;
+            }
+        }
+        document.write(`홀수합계 : ${total} <br/>`);
+
+
+        document.write(`<hr/>`);
+
+
+
+        total = 0;
+        for(let n=0; n<101; n++){
+            if(n % 2 == 0){
+                document.write(`짝수합계 : ${n} <br/>`);
+            }else{
+                document.write(`홀수합계 : ${n} <br/>`);
+            }
+        }
+
+        document.write(`<hr/>`);
+
+        total=0;
+        for(let n=0; n<101; n++){
+            if(n % 2 ==0){
+                document.write(`짝수-합계 : ${total} `);
+            }else{
+                document.write(`홀수-합계 : ${total} `);
+            }
+        }
+
+    </script>
+</head>
+<body>
+</body>
+</html>

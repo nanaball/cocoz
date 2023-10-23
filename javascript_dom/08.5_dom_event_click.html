@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title></title> <script>
+        // function changeColor(color){
+        //     document.body.style.backgroundColor = color;
+        // }
+
+        // // 브라우저 모든 문서가 출력되고 사용할 준비가 완료되었을 때 실행되는 이벤트 함수
+        // window. onload = function(){
+        //     alert('문서 로드 완료');
+
+        //     let pink = document.getElementById("pink");
+        //     pink.onclick = function(){
+        //         // document.body.style.backgroundColor = 'pink';
+        //         // document.body.style.backgroundColor = pink.id;
+        //         console.log(this);
+        //         console.log(pink);
+        //         document.body.style.backgroundColor = this.id;
+        //     }
+
+        //     let orangeTag = document.querySelector("#orange");
+        //     orangeTag.addEventListener('click', function(){
+        //         document.body.style.backgroundColor = this.id;
+        //     });
+        // }
+    </script>
+</head>
+<body>
+    <!-- (label>input:radio[name=r1])*4 -->
+    <label for="lightblue">
+        <!-- onclick="changeColor('lightblue');" -->
+        <input type="radio" name="r1" id="lightblue" >
+        lightblue
+    </label>
+    <label>
+        <!--  onclick="changeColor(this.id);" -->
+        <input type="radio" name="r1" id="greenyellow">
+        greenyellow
+    </label>
+    <label>
+        <input type="radio" name="r1" id="pink">
+        pink
+    </label>
+    <label>
+        <input type="radio" name="r1" id="orange">
+        orange
+    </label>
+    <script>
+        let radios = document.getElementsByName("r1");
+        console.log(radios);
+
+        let lables = document.getElementsByTagName("label");
+        for(let i =0; i < lables.length; i++){
+            console.log(radios[i]);
+            console.log(lables[i]);
+            console.log(lables[i].innerText);
+        }
+        /*
+        for(let i in radios){
+            radios[i].onchange = function(){
+            // radios[i].onclick = function(){
+                document.body.style.backgroundColor = lables[i].innerText
+            }
+        }
+        */
+
+        for(let item of radios){
+            console.log(item);
+            item.onclick = function(){
+                let color = item.parentNode.innerText;
+                console.log(color);
+                // document.body.style.backgroundColor = this.id;
+                document.body.style.backgroundColor = color
+            }
+        }
+    </script>
+</body>
+</html>

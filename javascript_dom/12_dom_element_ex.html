@@ -39,6 +39,8 @@
             li.innerText = '할 일 추가 - '+i;
             li.className = 'todos';
             toDoList.appendChild(li);    
+            // toDoList.append(li);
+            // toDoList.preppend(li);
         }
 
 
@@ -49,7 +51,7 @@
             let input = document.getElementById("li");
             let todo = document.querySelector("#todo");
             let toDoList = document.createTextNode('todo.value');
-            input.append(toDoList);
+            toDoList.append(li);
 
 
 

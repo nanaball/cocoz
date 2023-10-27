@@ -1,0 +1,32 @@
+<!-- 00_hello_jquery.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title>jquery</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        // jquery에 포함된 기능임을 명시하는 keyword
+        // jQuery   ||     $
+        // = window.onload = function(){}
+        jQuery(document).ready(function(){
+            alert("hello jQuery - 1");
+        });
+
+        // 문서가 준비되었을때
+        $(document).ready(function(){
+            alert('hello jQeryy -2');
+        });
+
+        // jQuery ==> $ > _
+        let _ = $.noConflict();
+
+        _(document).ready(function(){
+            alert('hello jQeryyy -3');
+        });
+    </script>
+</head>
+<body>
+    <h1>hello jQuery</h1>
+</body>
+</html>

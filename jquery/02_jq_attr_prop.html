@@ -1,0 +1,39 @@
+<!-- 02_jq_attr_prop.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title>속성</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function(){
+            // button 태그요소의 click 이벤트
+            // attr는 작성된 위치
+            $("button").click(function(){
+                let dog = $("#dog");
+                let src = dog.attr("src");
+                alert("attr : " + src);
+            }); // 버튼클릭
+            
+            // 아이디값이 propValue인 요소 1개
+            // porp는 실제 위치
+            $("#propValue").click(function(){
+                let src = $("#dog").prop("src");
+                alert("prop : "+src);
+            }); // prop value click event end
+
+            // attr 매개변수 1개일때는 읽어오고 2개일때는 읽고 변경함
+            $("#dog").click(function(){
+                $(this).attr("src","../img/pome.png");
+
+            });
+        }); // onload
+    </script>
+</head>
+<body>
+    <img id="dog" src="../img/poodle.png" alt="멍멍" width="120" height="100"/>
+    <button>attr 출력</button>
+    <button id="propValue">prop 출력</button>
+
+</body>
+</html>

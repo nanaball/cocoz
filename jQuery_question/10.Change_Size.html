@@ -9,6 +9,28 @@
 	 * 기능 : 크기 변경 
 	 * 함수 : css() / width(), height()
 	 */
+
+	$(function(){
+		$("#run").click(function(){
+			$("#target").css({
+				width : 300,
+				height : 300
+			});
+			
+			/*
+			let width = $("#target").width();
+			console.log(width);
+			let height = $("#target").height();
+			console.log(height);
+			
+			$("#target").width(300);
+			$("#target").height(400);
+			
+			$("#target").width(300).height(200);
+			*/
+		});	
+	});
+
 </script>
 
 </head>
@@ -19,5 +41,6 @@
 		#target<br>
 	</div>
 	<input type="button" value="run" id="run"/>
+
 </body>
 </html>

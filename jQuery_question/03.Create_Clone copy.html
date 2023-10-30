@@ -3,13 +3,21 @@
 <head>
 <meta charset="utf-8">
 <script  src="http://code.jquery.com/jquery-latest.min.js">
-
+</script>
+<script>
 	/**
 		 * 대상 : div(#target)
 		 * 기능 : div(#target)를 복제 하여 div(#target) 뒤에 추가
 		 * 함수 : clone(), after()
 		 * A.clone() : A tag 요소를 복제하여 요소로 반환
 		 */
+
+		 $(function(){
+			$("#run").click(function(){
+				let clone = $("#target").clone();
+				$("#target").after(clone);
+		 	});
+		 });
 
 </script>
 
@@ -27,20 +35,5 @@
 	</div>
 	<!-- after -->
 	<input type="button" value="run" id="run"/>
-	<script>
-		$("#run").on("click",function(){
-			// clone 이라는 변수에 #target인 요소를 복제하여 저장
-			let clone = $("#target").clone();
-			// 복제한 요소를 #target 요소 뒤에 추가
-			$("#target").after(clone);
-		});
-		
-		/*	$("#run").click(function(){
-			$("#target").clone().appendTo("#target");
-		*/
-	
-	
-	</script>
-	
 </body>
 </html>

@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <script  src="http://code.jquery.com/jquery-latest.min.js">
+<<<<<<< HEAD
 </script>
 <script>
+=======
+
+>>>>>>> e2ed9038c44c06307040f1ec044a0b06d16da3a4
 	/**
 		 * 대상 : div(#target)
 		 * 기능 : div(#target)를 복제 하여 div(#target) 뒤에 추가
@@ -12,6 +16,7 @@
 		 * A.clone() : A tag 요소를 복제하여 요소로 반환
 		 */
 
+<<<<<<< HEAD
 		 $(function(){
 			$("#run").click(function(){
 				let clone = $("#target").clone();
@@ -19,6 +24,8 @@
 		 	});
 		 });
 
+=======
+>>>>>>> e2ed9038c44c06307040f1ec044a0b06d16da3a4
 </script>
 
 </head>
@@ -35,5 +42,19 @@
 	</div>
 	<!-- after -->
 	<input type="button" value="run" id="run"/>
+<<<<<<< HEAD
+=======
+	<script>
+		
+		
+		$("#run").click(function(){
+			$("#target").clone().after("#target");
+		});
+		
+	
+	
+	</script>
+	
+>>>>>>> e2ed9038c44c06307040f1ec044a0b06d16da3a4
 </body>
 </html>

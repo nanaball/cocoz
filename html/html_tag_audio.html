@@ -9,28 +9,33 @@
 <body>
     <h3>audio</h3>
     <audio src="../media/Kalimba.mp3" controls autoplay></audio>
+
     <audio controls loop>
         <!-- ogg 파일이 정상적이면 ogg파일이 작동하고 아니면 그 밑의 mp3파일이 재생됨 -->
         <source src="../media/Kalimba.ogg" type="audio/ogg"/>
         <source src="../media/Kalimba.mp3" type="audio/mp3"/>
     </audio>
     <hr>
-    <h3>viedo</h3>
+
+    <h3>video</h3>
     <!-- autoplay하면 소리로 인해 사용자가 놀랄수 있으니 muted 설정하고 autoplay하면 자동재생됨 -->
     <video src="../media/Wildlife.mp4" width="400" autoplay muted> </video><br/>
-    <!-- poster / 영상이 재생이 안될때 보여주는 화면-->
+
     <video width="500" height="300" loop controls muted autoplay>
         <source src="../media/Wildlife.webm" type="video/webm"/>
         <source src="../media/Wildlife.mp4" type="video/mp4"/>
     </video>
+    <!-- poster / 영상이 재생이 안될때 보여주는 화면-->
     <video poster="../img/bonobono.jpg" width="500" height="300" loop controls muted autoplay>
         <source src="../../media/Wildlife.webm" type="video/webm"/>
         <source src="../../media/Wildlife.mp4" type="video/mp4"/>
     </video>
     <hr/>
+
     <!-- 동영상 용량이 너무 크면 해당 화면에서 영상이 재생되지 않고 유투브에서 재생하게 함 -->
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/MLb0sY8ZJf4" title="[Playlist] sentimental autumn pop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <hr/>
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/3Hr35Kr2aXA" title="악뮤(AKMU)의 킬링보이스를 라이브로! - 라면인건가, DINOSAUR, 후라이의 꿈, Love Lee, 사람들이 움직이는 게, 200%, 시간과 낙엽, 오랜 날 오랜 밤,낙하" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </body>
 </html>
+

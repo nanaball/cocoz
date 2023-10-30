@@ -12,7 +12,14 @@
 	
 	$(function(){
 		$("#run").click(function(){
-			$(".target").attr("button","disabled");
+			// disabled checked selected readonly autofocus
+			// $("button"), $("button[data-role=none]"), $(".target > button")
+			// 속성값을 읽어온다.
+			// $(".target button").attr("disabled");
+			// 속성값을 부여 disabled = 'disabled'
+			// $(".target button").attr("disabled","disabled");
+			// true 속성 활성화. false 속성 비활성화
+			$(".target button").attr("disabled","true");
 		});
 	});
 		

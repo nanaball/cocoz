@@ -28,16 +28,12 @@
 	<!-- after -->
 	<input type="button" value="run" id="run"/>
 	<script>
-		$("#run").on("click",function(){
-			// clone 이라는 변수에 #target인 요소를 복제하여 저장
-			let clone = $("#target").clone();
-			// 복제한 요소를 #target 요소 뒤에 추가
-			$("#target").after(clone);
+		
+		
+		$("#run").click(function(){
+			$("#target").clone().after("#target");
 		});
 		
-		/*	$("#run").click(function(){
-			$("#target").clone().appendTo("#target");
-		*/
 	
 	
 	</script>

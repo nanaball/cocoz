@@ -13,6 +13,34 @@
  * join('구분자') - 배열 항목 사이에 구분자를 추가하여 배열의 값을 하나의 문자열로 반환
  */
 
+ $(function(){
+		$("#run").click(function(){
+			/*
+			let content = $("#target").html();
+			content = content.replaceAll('cat','dog');
+			$("#target").html(content);
+			*/
+
+			let content = $("#target").html();
+			console.log(content);
+			let strs = content.split('cat');
+			console.log(strs);
+			strs = strs.join('dog');
+			console.log(strs);
+			$("#target").html(strs);
+
+
+			let str = 'a|b|c|d|e|f|g';
+			strs = str.split('|');
+			console.log(strs);
+			// ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+			str = strs.join('+');
+			console.log(str);
+			// a+b+c+d+e+f+g
+		});
+	 });
+
 </script>
 
 </head>

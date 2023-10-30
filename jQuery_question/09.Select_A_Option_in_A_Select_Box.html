@@ -6,14 +6,20 @@
 <script type="text/javascript">
 	/**
 	 * 대상 : div(#target) 내부 select
-	 * 기능 : option 중에서 마지막 item 선택 
+	 * 기능 : option 중에서 마지막 item 선택 - selected
 	 * 함수 : prop(), last()
 	 * 
 	 * last() 선택된 요소들 중 마지막 요소
 	 * first() 선택된 요소들 중 첫번째 요소
 	 */
 
-
+	 $(function(){
+		$("#run").click(function(){
+			$("#target select option:last-child()").prop("selected", true);
+			// $("#target select option").last().attr("selected",true);
+		});
+	 });
+	 
 </script>
 
 </head>

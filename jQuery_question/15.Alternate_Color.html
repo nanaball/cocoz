@@ -10,6 +10,18 @@
  * 사용 :  nth-child, odd, even
  */
 
+ $(function(){
+	$("#run").click(function(){
+		// 인덱스 번호는 0 1 2 3 4 5 .. 1씩 증가
+		$("#target select option:nth-child(2n+1)").css("background","yellow");
+		// $("select option:nth-child(2n+1)").css("background","orange");
+		// $("option:nth-child(2n+1)").css("background","purple");
+		
+		// even 짝수 순번 odd 홀수 순번
+		// $("#target select option:nth-child(even)").css("background","yellowgreen");
+		// $("#target select").find("option:nth-child(odd)").css("background","blue");
+	});
+ });
 </script>
 
 </head>

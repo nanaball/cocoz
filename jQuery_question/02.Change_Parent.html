@@ -11,6 +11,15 @@
 	 * 기능 : content(text) - span(change me!)를 span(complated) 로 변경 
 	 * 함수 : text()
 	 */
+
+	$(function(){
+		// 문서가 모두 로드되어서 사용 준비가 되었을 때
+		$("#run").click(function(){
+			// $("#run").on("click",function(){});
+			$("span").html("span(complated)");
+			// $(#target > span").text("span(complated)");
+		 });
+	});
 </script>
 
 </head>
@@ -25,18 +34,5 @@
 			me!)</span>
 	</div>
 	<input type="button" id="run" value="run"  /> 
-
-	<script type="text/javascript">
-		/**
-		 * 시점 : button click 시
-		 * 대상 : div(#target) 내부 span 태그
-		 * 기능 : content(text) - span(change me!)를 span(complated) 로 변경 
-		 * 함수 : text()
-		 */
-	
-		 $("#run").click(function(){
-			$("span").html("complated");
-		 });
-	</script>
 </body>
 </html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        #itm{
+            text-align: right;
+            padding-left: 100px;
+        }
+        
+        #itm2{
+            padding: 5px 20px 5px 50px;
+        }
+
+        #itm3{
+            text-align: center;
+        }
+
+
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function(){
+            $("#sbm").click(function(){
+
+                let id = $('#idnm').val();
+  
+
+                while(!id){					
+                alert('아이디를 작성해주세요');
+                $('#idnm').focus();		
+                    return false;			
+                }
+            });
+        });
+
+        $(function(){
+            $("#sbm").click(function(){
+
+                let id = $('#pw1').val();
+  
+
+                while(!id){					
+                alert('비밀번호를 작성해주세요');
+                $('#pw1').focus();		
+                    return false;			
+                }
+            });
+        });
+
+        $(function(){
+            $("#sbm").click(function(){
+
+                let id = $('#pw2').val();
+  
+
+                while(!id){					
+                alert('비밀번호 확인을 작성해주세요');
+                $('#pw2').focus();		
+                    return false;			
+                }
+            });
+        });
+
+        $(function(){
+            $("#sbm").click(function(){
+
+                let id = $('#bd').val();
+  
+
+                while(!id){					
+                alert('생년월일을 작성해주세요');
+                $('#bd').focus();		
+                    return false;			
+                }
+            });
+        });
+
+        $(function(){
+            $("#sbm").click(function(){
+
+                let id = $('#nm').val();
+  
+
+                while(!id){					
+                alert('이름을 작성해주세요');
+                $('#nm').focus();		
+                    return false;			
+                }
+            });
+        });
+
+        $(function(){
+            $("#sbm").click(function(){
+
+                let id = $('#tlnb').val();
+  
+
+                while(!id){					
+                alert('전화번호를 작성해주세요');
+                $('#tlnb').focus();		
+                    return false;			
+                }
+            });
+        });
+                
+
+        $(function(){
+            $("#sbm").click(function(){
+
+                let pw1 = $("#pw1").val();
+                let pw2 = $("#pw2").val();
+
+                console.log(pw1);
+                console.log(pw2);
+  
+                if ( pw1 != '' && pw2 == '' ) {
+                null;
+                }else if (pw1 != "" || pw2 != "") {
+                    if (pw1 == pw2) {
+
+                    }else{alert('비밀번호가 일치하지 않습니다.');
+                    $("#pw1").focus().val("");
+                    $("#pw2").val("");
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <table border="0">
+        <tr>
+            <th colspan="2"><h2>회원가입</h2></th>
+        </tr>
+        <tr>
+            <td id="itm">아이디</td>
+            <td id="itm2"><input type="text" id="idnm" required /></td>
+        </tr>
+        <tr>
+            <td id="itm">비밀번호</td>
+            <td id="itm2"><input type="password" id="pw1" class="pw" required /></td>
+        </tr>
+        <tr>
+            <td id="itm">비밀번호 확인</td>
+            <td id="itm2"><input type="password" id="pw2" class="pw" required /></td>
+        </tr>
+        <tr>
+            <td id="itm">생년월일</td>
+            <td id="itm2"><input type="text" id="bd" required /></td>
+        </tr>
+        <tr>
+            <td id="itm">이름</td>
+            <td id="itm2"><input type="text" id="nm" required /></td>
+        </tr>
+        <tr>
+            <td id="itm">전화번호</td>
+            <td id="itm2"><input type="text" id="tlnb" required /></td>
+        </tr>
+        <tr>
+            <td colspan="2" id="itm3">
+                <button type="submit" id="sbm">회원가입</button>
+                <button type="button">정보수정</button>
+            </td>    
+        </tr>
+    </table>
+    <script>
+    </script>
+</body>
+</html>
